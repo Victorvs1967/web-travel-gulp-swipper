@@ -1,0 +1,17 @@
+header.header
+  .container
+    nav.header__nav
+      a(href="#!").header__logo
+        img(src="@img/icons/logo.svg", alt="logo")
+      ul.header__nav-list
+        li #[a(href="#!").header__nav-item.active Home]
+        li #[a(href="#!").header__nav-item About]
+        li #[a(href="#!").header__nav-item Packages]
+        li #[a(href="#!").header__nav-item FAQ]
+        li #[a(href="#!").header__nav-item Community]
+      .header__nav-buttons
+        a(href="#!").btn.outline Login
+        a(href="#!").btn Sign Up
+
+
+include ./_mobile-nav

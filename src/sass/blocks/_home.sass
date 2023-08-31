@@ -1,0 +1,140 @@
+.discover
+  padding-top: 7.2rem
+  &__wrap
+    padding-top: 6rem
+    padding-bottom: 6rem
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+    gap: 8rem
+  &__left
+    padding-top: 3.2rem
+  &__title
+    margin-bottom: 2.4rem
+    position: relative
+    &::after
+      content: ""
+      width: 26.8rem
+      height: 2.4rem
+      background-image: url('@img/discover/underline.svg')
+      position: absolute
+      left: 0
+      bottom: 0
+      z-index: -1
+  &__desc
+    margin-bottom: 4rem
+  &__form
+    padding: 1.2rem 1.6rem
+    border: 1px solid rgba(144, 144, 144, 0.30)
+    border-radius: 1.6rem
+    display: grid
+    grid-template-columns: 1fr 1fr 4.8rem
+    align-items: center j
+    gap: 1.6rem
+    &-field
+      padding-left: 3.6rem
+      position: relative
+      display: flex
+      flex-direction: column
+      gap: .5rem
+      &:first-child
+        padding-right: 1.6rem
+        &::after
+          content: ""
+          width: 1px
+          height: 2.4rem
+          background-color: #000
+          position: absolute
+          right: 0
+          top: 0
+          transform: translateY(50%)
+      & label
+        &.map::before
+          content: ""
+          width: 2.4rem
+          height: 2.4rem
+          background-image: url('@img/icons/map.svg')
+          position: absolute
+          top: 0
+          left: 0
+        &.calendar::before
+          content: ""
+          width: 2.4rem
+          height: 2.4rem
+          background-image: url('@img/icons/calendar.svg')
+          background-size: auto
+          background-position: 0 0
+          background-repeat: no-repeat
+          position: absolute
+          top: 0
+          left: 0
+      & input::placeholder
+        font-size: 1.4rem
+      & input[type='date']
+        font-size: 1.4rem
+        color: var(--text-color-grey)
+    &-btn
+      width: 4.8rem
+      height: 4.8rem
+      border-radius: 1rem
+      background-color: var(--text-color-accent)
+      background-image: url('@img/icons/search.svg')
+      background-position: center
+      background-repeat: no-repeat
+      background-size: auto
+      transition: .3s opacity ease-in
+      &:hover
+        opacity: .7
+  &__right
+    &-image
+      width: 100%
+      position: relative
+    &-product
+      width: 30rem
+      padding: 1.2rem
+      position: absolute
+      top: 9rem
+      left: 4rem
+      display: flex
+      align-items: center
+      gap: 1.6rem
+      border: none
+      border-radius: 1.2rem
+      background-color: #f0f0f0
+      box-shadow: 0px 4px 34px 0px rgba(50, 75, 104, 0.17)
+      img
+        width: 5.8rem
+        height: auto
+        border-radius: .8rem
+        overflow: hidden
+      &_info
+        flex: 1
+        &-header
+          margin-bottom: 0.4rem
+          display: flex
+          justify-content: space-between
+          align-items: center
+        &-title
+          font-size: 1.8rem
+          font-weight: 500
+        &-rating
+          position: relative
+          padding-left: 2rem
+          font-size: 1.4rem
+          &::before
+            content: ''
+            position: absolute
+            width: 1.6rem
+            height: 1.6rem
+            background-image: url('@img/icons/star-small.svg')
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+        &-desc
+          color: var(--text-color-grey)
+          span
+            color: var(--text-color)
+            &:before
+              content: '$'
+              margin-left: .25em
+              color: var(--text-color-accent)

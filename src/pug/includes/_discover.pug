@@ -1,0 +1,26 @@
+section.discover
+  .container
+    .discover__wrap
+      aside.discover__left
+        h1.title-h1.discover__title Discover your favorite place with us
+        p.text-p.discover__desc Your journey begins here with our curated travel experiences. Discover new horizons, create lasting memories, and explore the world with our expertly crafted itineraries.
+        form(action="").discover__form
+          .discover__form-field
+            label(for="location").map Locations
+            input(type="text", placeholder="e.g Bali, Indonesia", name="location")#autoComplete
+          .discover__form-field
+            label(for="date").calendar Date and Time
+            input(type="text", placeholder="MM/DD/YYYY", name="date")#calendar
+          button(type='submit').discover__form-btn
+      aside.discover__right
+        .discover__right-image
+          img(src="@img/discover/hero-img.png", alt="hero")
+          //- product element
+          .discover__right-product
+            img(src="@img/hints/coco-de-heaven.jpg", alt="hint")
+            .discover__right-product_info
+              .discover__right-product_info-header
+                h4.discover__right-product_info-title Coco De Heaven
+                span.discover__right-product_info-rating (4.6)
+              .discover__right-product_info-desc Starts from
+                span.discover__right-product_info-price 400
