@@ -1,0 +1,36 @@
+.card
+  max-width: 30.4rem
+  flex-shrink: 0
+  &-image
+    width: 100%
+    margin-bottom: 1.6rem
+    border-radius: 1.2rem
+    overflow: hidden
+  &__header
+    margin-bottom: 0.4rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-title
+      font-size: 2rem
+      font-weight: 500
+  &__rating
+    padding-left: 2rem
+    font-size: 1.4rem
+    display: flex
+    align-items: center
+    gap: 0.4rem
+    &::before
+      display: block
+      content: ''
+      width: 1.6rem
+      height: 1.6rem
+      background-image: url('@img/icons/star-small.svg')
+      background-repeat: no-repeat
+  p
+    span
+      color: var(--text-color)
+      &:before
+        content: '$'
+        margin-left: .25em
+        color: var(--text-color-accent)

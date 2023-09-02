@@ -1,0 +1,13 @@
+secion.popular
+  .container
+    .popular__wrapper
+      .popular__header
+        .popular__header-text
+          h3.title-h3 Popular Destinations
+          p.text-p See our popular destinations that our client choose
+        .popular__header-controls
+          button.left
+          button.right
+      .popular__slider
+        each slide in populars
+          +slider-card(slide)

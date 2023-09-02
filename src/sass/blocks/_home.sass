@@ -118,18 +118,16 @@
           font-size: 1.8rem
           font-weight: 500
         &-rating
-          position: relative
           padding-left: 2rem
           font-size: 1.4rem
+          display: flex
+          align-items: center
           &::before
+            display: block
             content: ''
-            position: absolute
             width: 1.6rem
             height: 1.6rem
             background-image: url('@img/icons/star-small.svg')
-            top: 50%
-            transform: translateY(-50%)
-            left: 0
         &-desc
           color: var(--text-color-grey)
           span
@@ -138,3 +136,26 @@
               content: '$'
               margin-left: .25em
               color: var(--text-color-accent)
+    &-scrolldown
+      width: 14rem
+      height: 14rem
+      position: absolute
+      right: 1.5rem
+      bottom: 2rem
+      &_text
+        width: 100%
+        height: 100%
+        background-image: url("@img/discover/scroll-down-text.svg")
+        animation: rotate 10s linear 0s infinite running normal
+      img
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+
+
+@keyframes rotate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)

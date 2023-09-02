@@ -10,7 +10,8 @@ section.discover
             input(type="text", placeholder="e.g Bali, Indonesia", name="location")#autoComplete
           .discover__form-field
             label(for="date").calendar Date and Time
-            input(type="text", placeholder="MM/DD/YYYY", name="date")#calendar
+            //- input(type="text", placeholder="MM/DD/YYYY", name="date")#calendar
+            input(type="text", placeholder="MM/DD/YYYY", name="date")#datepicker
           button(type='submit').discover__form-btn
       aside.discover__right
         .discover__right-image
@@ -24,3 +25,8 @@ section.discover
                 span.discover__right-product_info-rating (4.6)
               .discover__right-product_info-desc Starts from
                 span.discover__right-product_info-price 400
+          //- scrolldown
+          .discover__right-scrolldown
+            .discover__right-scrolldown_text
+            a(href="#footer")
+              img(src="@img/discover/scroll-down.svg", alt="scroll img")
