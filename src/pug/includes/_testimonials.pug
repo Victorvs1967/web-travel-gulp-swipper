@@ -1,0 +1,7 @@
+section.testimonials
+  .container
+    .testimonials__wrapper
+      each col in [0, 3, 6]
+        .testimonials__col
+          each i in [0, 1, 2]
+            +testimonial-card(testimonials[i + col])

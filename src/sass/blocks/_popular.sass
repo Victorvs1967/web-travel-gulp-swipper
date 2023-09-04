@@ -16,15 +16,14 @@
       button
         width: 4.8rem
         height: 4.8rem
+        border: 1px solid var(--text-color-grey)
         border-radius: 50%
         background-position: center
         background-repeat: no-repeat
         &.left
-          border: 1px solid var(--text-color-grey)
           background-image: url('@img/icons/arrow-left.svg')
         &.right
-          background-color: var(--text-color-accent)
           background-image: url('@img/icons/arrow-right.svg')
-  &__slider
-    display: flex
-    gap: 3.2rem
+        &.active
+          border: none
+          background-color: var(--text-color-accent)

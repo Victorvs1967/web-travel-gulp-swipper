@@ -1,11 +1,20 @@
 import autoComplete from "@tarekraafat/autocomplete.js";
 import { easepick, TimePlugin } from '@easepick/bundle';
 
-// import AirDatepicker from 'air-datepicker';
-// import 'air-datepicker/air-datepicker.css';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
 // import mobileNav from './modules/mobile-nav.js';
 import locationList from './modules/locationList.js';
+
+const swiper = new Swiper('.popular__slider', {
+  slidesPerView: 4,
+  spaceBetween: 32,
+  navigation: {
+    nextEl: '.right',
+    prevEl: '.left',
+  },
+});
 
 const picker = new easepick.create({
   element: "#datepicker",
@@ -18,12 +27,6 @@ const picker = new easepick.create({
     TimePlugin
   ]
 });
-
-// new AirDatepicker('#calendar', {
-//   selectedDates: [new Date()],
-//   isMobile: true,
-//   autoClose: true,
-// });
 
 const autoCompleteJS = new autoComplete(
   {

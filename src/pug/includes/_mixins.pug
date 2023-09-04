@@ -9,9 +9,21 @@ mixin svg-icon(icon)
     use(href="@img/icons/icons.svg#".concat(icon) class="icon__".concat(icon))
 
 mixin slider-card(slide)
-  .card
-    img(src="@img/popular/" + slide.image, alt="slide").card__image
-    .card__header
-      h3.card__header-title= slide.location
-      span.card__rating (#{slide.rating})
+  .slider__card
+    img(src="@img/popular/" + slide.image, alt="slide").slider__card-image
+    .slider__card__header
+      h3.slider__card__header-title= slide.location
+      span.slider__card__rating (#{slide.rating})
     p.text-p1 Starts from <span>#{slide.price}</span>
+
+mixin testimonial-card(testimonial)
+  .testimonial__card
+    .testimonial__card-stars
+      each _ in [1, 2, 3, 4, 5]
+        img(src="@img/testimonials/star.svg", alt="star")
+    p.text-p1 "#{testimonial.text}"
+    .testimonial__card-user
+      img(src="@img/testimonials/" + testimonial.avatar, alt="avatar").avatar
+      .testimonial__card-user_info
+        h3= testimonial.name
+        p.text-p1= testimonial.desc

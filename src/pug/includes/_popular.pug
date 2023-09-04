@@ -7,7 +7,8 @@ secion.popular
           p.text-p See our popular destinations that our client choose
         .popular__header-controls
           button.left
-          button.right
+          button.right.active
       .popular__slider
-        each slide in populars
-          +slider-card(slide)
+        .swiper-wrapper
+          each slide in populars
+            .swiper-slide #[+slider-card(slide)]
