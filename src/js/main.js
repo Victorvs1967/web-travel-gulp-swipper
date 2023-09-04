@@ -1,3 +1,5 @@
+import ScrollReveal from 'scrollreveal';
+
 import autoComplete from "@tarekraafat/autocomplete.js";
 import { easepick, TimePlugin } from '@easepick/bundle';
 
@@ -46,5 +48,19 @@ const autoCompleteJS = new autoComplete(
     }
   }
 );
+
+ScrollReveal({
+  distance: '50%',
+  duration: 2800,
+  reset: true,
+});
+
+ScrollReveal().reveal('.partners__row');
+ScrollReveal().reveal('.header', {
+  origin: 'top',
+});
+ScrollReveal().reveal('.discover__right-product', {
+  origin: 'left',
+});
 
 // mobileNav();
